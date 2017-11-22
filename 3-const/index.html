@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3-const</title>
+</head>
+<body>
+    <script>
+        let count = 10;
+        let discount = 0.9
+        /* let count = 11; //Uncaught SyntaxError: Identifier 'count' has already been declared
+        // let 和 coust 在一个作用域内 不能重复声明 
+        区别在于let 可以重新赋值
+        */
+        discount = 0.5; // 此时游览器输入 discount为0.5
+
+        // 如何修改const?
+        const person = {
+            name:'Jelyy',
+            age: 20
+        }
+        console.log(person);
+        // 此时是object
+
+        /* person = {
+            name:'Jelyy',
+            age: 21
+        }
+        console.log(person);
+        // 出现错误 */
+
+        // 但是 用object去修改指针引用的值
+        person.age= 100;
+        console.log(person);
+        // age 改为100，person是对象，age就是属性值得概念。
+
+        // 禁止修改
+        Object.freeze(preson); // es5 禁止修改
+        person.age= 10000;
+        console.log(person);
+
+
+    </script>
+</body>
+</html>

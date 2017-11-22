@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4-let-const</title>
+</head>
+<body>
+    <script>
+        /* (function () {
+            var name = 'Tony';
+        })();
+        // input `name` at brower is "".
+        // this IIEF style;
+        
+         */
+
+        /* var name = 'Jelly';
+        (function () {
+             name = 'Tony';
+        })(window);
+        // input `name` at brower is "Tony".
+        // add window for IIEF style; */
+
+        /* {
+           const name = 'Tony';
+        }
+        console.log(name); // 此时name就是空字符串 “” */
+
+    /* for (var i = 0; i < 10 ;i++) {
+        console.log(i);
+        setTimeout(() => {
+            console.log(`i now is : ${i}`);            
+        }, 1000);
+    }
+    // 此时i就是10 ，var 全局作用域，console.log(i) 执行后 1000毫秒后
+        得i都是10
+    */
+
+    for (let i = 0; i < 10; i++) {
+        console.log(i);
+        setTimeout(() => {
+            console.log(`i now is : ${i}`);            
+        }, 1000);
+        
+    }
+    // let i ,i 变成块级作用域，在{}里面执行，{}里面的i都要使用块的变量i
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2-let</title>
+</head>
+<body>
+    <script>
+        let count = 10;
+        let discount = 0.9
+        /* let count = 11; //Uncaught SyntaxError: Identifier 'count' has already been declared
+        // let 和 coust 在一个作用域内 不能重复声明 */
+        
+        if (count > 5){
+            let discount = 0.5
+
+        }
+       /* console.log (discount); // 显示0.9 ，说明let就是black 作用域 */
+
+    </script>
+</body>
+</html>
